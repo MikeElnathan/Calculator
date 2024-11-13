@@ -1,0 +1,143 @@
+body
+{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    background-color: black;
+}
+
+#topBanner
+{
+    outline: 1px solid darkblue;
+    height: fit-content;
+    width: 30vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+#bannerText
+{
+    text-align: center;
+    font-family: calibri, serif;
+    margin-bottom: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border-bottom: 1px solid white;
+}
+.descriptionText
+{
+    text-indent: 20px;
+    text-align: justify;
+}
+#firstPara::first-letter
+{
+    font-size: 2em;
+    color: red;
+}
+
+#Calculator
+{
+    outline: 1px solid white;
+    background-color: #f1faee;
+    width: 300px;
+    height: 420px;
+    margin-left: 1vw;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+#brand
+{
+    outline: 1px solid skyblue;
+    color: black;
+    background-color: lightblue;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 8px;
+    margin-left: 10px;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+#screen
+{
+    outline: 1px solid black;
+    background-color: #e5e6e4;
+    height: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+#topScreen
+{
+    border-bottom: 1px solid black;
+    height: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#keyPad
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 50vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-right: 5px;
+}
+.button
+{
+    font-weight: bold;
+    font-family: calibri, serif;
+    background-color: #003566;
+    height: 38px;
+    width: 38px;
+    text-align: center;
+    border-radius: 25px;
+    margin-top: 5px;
+    margin-left: 5px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.num
+{
+    flex: 1 1 30%;
+}
+
+.operations
+{
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+}
+#equal
+{
+    flex-grow: 1;
+}
+
+#numbers
+{
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #ccd5ae;
+    padding-bottom: 10px;
+    padding-top: 2px;
+    padding-right: 5px;
+    border-radius: 25px;
+}
