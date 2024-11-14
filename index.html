@@ -3,67 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <div id="topBanner">
-        <h1 id="bannerText">
-            A Calculator
-        </h1>
-        <div id="description">
-            <p class="descriptionText" id="firstPara">
-                This calculator is absolutely fantastic, folks—believe me. 
-                It’s simple, easy to use, just incredible. You can add, 
-                subtract, multiply, divide—all the basics, no nonsense. 
-                Some people make things too complicated, but not this. You 
-                press a button, you get a result. It’s efficient, it's 
-                smart, and it's got everything you need, nothing you don’t. 
-                A lot of people are saying it’s the best calculator they’ve 
-                ever seen. And it’ll give you the best numbers—perfect 
-                numbers. You’re gonna love it.
-            </p>
-            <p class="descriptionText"> 
-                It’s powerful but straightforward. Some calculators, they 
-                try to do too much—scientific, graphing, all those extra buttons, 
-                nobody needs that. But this one? Just the basics, exactly what 
-                real people want. And let me tell you, it’s FAST. You press, boom, 
-                there’s your answer. No waiting, no guessing, no mistakes. A lot 
-                of people are saying it’s saving them so much time. Honestly, it’s 
-                a calculator like you’ve never seen before, and I think everyone’s 
-                going to be very, very impressed.    
-            </p>
+        <h1>Calculator</h1>
+    </div>
+    <div class="Calculator" style="width: 400px;">
+        <div class="screen" style="width: 380px; height: 100px;"></div>
+        <div class="keypad">
+            <div class="button" data-action="num" data-value="1">1</div>
+            <div class="button" data-action="num" data-value="2">2</div>
+            <div class="button" data-action="num" data-value="3">3</div>
+            <div class="button" data-action="num" data-value="4">4</div>
+            <div class="button" data-action="num" data-value="5">5</div>
+            <div class="button" data-action="num" data-value="6">6</div>
+            <div class="button" data-action="num" data-value="7">7</div>
+            <div class="button" data-action="num" data-value="8">8</div>
+            <div class="button" data-action="num" data-value="9">9</div>
+            <div class="button" data-action="num" data-value="0">0</div>
+            <!-- --------------------------------------------------- -->
+             <div class="button" data-action="operation" data-value="add">+</div>
+             <div class="button" data-action="operation" data-value="add">-</div>
+             <div class="button" data-action="operation" data-value="add">/</div>
+             <div class="button" data-action="operation" data-value="add">*</div>
+             <!----------------------------------------------------------->
+             <div class="button" data-action="other" data-value="equal">=</div>
+             <div class="button" data-action="other" data-value="clear">CLR</div>
+             <div class="button" data-action="other" data-value="delete">DEL</div>
         </div>
     </div>
-    <div id="Calculator">
-        <div id="brand">KASIO</div>
-        <div id="screen">
-            <div id="topScreen"></div>
-            <div id="bottomScreen"></div>
-        </div>
-        <div id="keyPad">
-            <div class="operations" id="smallButton"">
-                <div class="button" id="add">+</div>
-                <div class="button" id="minus">-</div>
-                <div class="button" id="divide">/</div>
-                <div class="button" id="multiply">x</div>
-                <div class="button" id="clear">CLR</div> 
-            </div>
-            <div id="numbers">
-                <div class="button num" id="num1">1</div>
-                <div class="button num" id="num2">2</div>
-                <div class="button num" id="num3">3</div>
-                <div class="button num" id="num4">4</div>
-                <div class="button num" id="num5">5</div>
-                <div class="button num" id="num6">6</div>
-                <div class="button num" id="num7">7</div>
-                <div class="button num" id="num8">8</div>
-                <div class="button num" id="num9">9</div>
-                <div class="button num" id="num0">0</div>
-                <div class="button num" id="equal" style="background-color: #ffb703;">=</div>
-            </div>
-        </div>
-    </div>
-    <script src="mainScript.js"></script>
+    
 </body>
 </html>
