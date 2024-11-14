@@ -7,7 +7,7 @@ minScreen.style.cssText =
 
 
 let num1 = 0, num2 = 0, answer;
-let operationButtonPushed = false;
+let opsCount = 0;
 let operation = "";
 
 function displayButton(a)
@@ -26,7 +26,6 @@ function displayManagement(a)
     if (isNaN(b)) //after "operation" button are pushed.
     {
         getNumberInput();
-        //minScreen.innerText += mainScreen.innerText;
         minToMaxScreen();
         let d = document.getElementById(a).innerText;
         minScreen.innerText += d;
@@ -39,12 +38,35 @@ function getNumberInput()
 {
     if (operation == "")
     {
-        
         num1 = parseInt(mainScreen.innerText);
+        opsCount = 1;
     }
     else if (operation != ""){
         num2 = parseInt(mainScreen.innerText);
+        opsCount = 3;
     }
+}
+
+function limiter()
+{
+    if (opsCount === 3){
+        returnANswer(operation);
+        mainScreen.innerText = answer;
+        num1 = answer;
+        opsCount = 0;
+    }else return console.log("E S C A P E");
+}
+
+function minToMaxScreen()
+{
+    minScreen.innerText += mainScreen.innerText;
+
+    if(answer !== undefined){
+        mainScreen.innerText = answer;
+    }
+    else if(answer === undefined){
+        mainScreen.innerText = "";
+    } 
 }
 
 function returnANswer(operation)
@@ -53,23 +75,17 @@ function returnANswer(operation)
     switch(operation){
         case "add":
             answer = num1 + num2;
-            //mainScreen.innerText = answer;
+            break;
+        case "minus":
+            answer = num1 - num2;
+            break;
+        case "divide":
+            answer = num1/num2 //REVISIT THIS!!
+            break; 
+        case "multiply":
+            answer = num1*num2;
             break;
     }
-}
-
-function minToMaxScreen()
-{
-    minScreen.innerText += mainScreen.innerText;
-
-    if(answer !== undefined){
-        console.log("mintomax");
-        mainScreen.innerText = answer;
-    }
-    else if(answer === undefined){
-        console.log("to clear");
-        mainScreen.innerText = "";
-    } 
 }
 
 document.querySelector(".operations").addEventListener("click", (a) => 
@@ -115,6 +131,7 @@ document.querySelector(".operations").addEventListener("click", (a) =>
                 num1 = 0;
                 num2 = 0;
                 operation = "";
+                answer = undefined;
                 displayButton("clear");
                 break;
         }
