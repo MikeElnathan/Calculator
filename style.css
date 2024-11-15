@@ -23,8 +23,15 @@ h1{
 }
 
 .screen{
-    margin: 10px 10px 10px 10px;
+    font-family: calibri, sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 10px 5px 10px 5px;
     border-radius: 10px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .keypad{
