@@ -117,20 +117,19 @@ function performOps(operation){
 
 function evaluateAnswer(){
     if (answer === Infinity || answer === -Infinity || answer === undefined){
-        // code here
-        console.log(num1 + " " + num2 + " " + answer);
         mainScreen.innerText = "NUTS!";
-        console.log(num1 + " " + num2 + " " + operation + " " + answer);
         answer = null;
     }
     else if(isNaN(answer)){
         console.log("Nan is good");
     }
     else{
-        // code here
-        mainScreen.innerText = answer.toFixed(2);
-        console.log(num1 + " " + num2 + " " + operation + " " + answer);
-        answer = null;
+        if(answer % 1 === 0){
+            mainScreen.innerText = answer;
+            answer = null;
+        }else {
+            mainScreen.innerText = parseFloat(answer.toFixed(3));
+        }  
     }
 }
 
