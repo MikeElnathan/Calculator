@@ -3,6 +3,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #606c38;
 }
 div{
     /* temp for debugging */
@@ -20,18 +21,30 @@ h1{
 .Calculator{
     margin-top: 10px;
     border-radius: 10px;
+    background-color: #fefae0;
+    width: 1200px;
 }
 
 .screen{
+    background-color: #656d4a;
     font-family: calibri, sans-serif;
     font-size: 32px;
     font-weight: 600;
-    margin: 10px 5px 10px 5px;
+    width:auto;
+    height: auto;
+    margin: 10px 10px 10px 10px;
     border-radius: 10px;
     padding-left: 10px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.screen:first-child{
+    display: flex;
+    flex-wrap: wrap;
+    color: #000814;
 }
 
 .keypad{
